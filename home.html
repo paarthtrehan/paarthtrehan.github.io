@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paarth | Personal Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      color: #555;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #0070f3;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+
+    section h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+
+    .project, .experience-item {
+      margin-bottom: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Paarth</h1>
+    <p>Developer • Student • Creator</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi, I'm Paarth — a computer science student with a passion for building clean, purposeful technology. I enjoy working on projects that solve real-world problems and always strive to learn something new. I'm particularly interested in cybersecurity, backend systems, and thoughtful UI design.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>LightEmAll (Java)</h3>
+      <p>A logic-based puzzle game built with object-oriented design principles and MVC architecture. Includes visual features like wire gradients from a power source.</p>
+    </div>
+    <div class="project">
+      <h3>Web CTF Challenge</h3>
+      <p>Exploited real-world web vulnerabilities (XSS, SQLi, auth bypass) in a simulated environment. Documented findings with security best practices.</p>
+    </div>
+    <!-- Add more projects as needed -->
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="experience-item">
+      <h3>Cybersecurity Intern – SecureNet</h3>
+      <p>Worked on vulnerability analysis and helped implement a secure CI/CD pipeline. Gained hands-on experience with Linux, GitHub Actions, and threat modeling.</p>
+    </div>
+    <!-- Add more experience items if needed -->
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>You can reach me at <strong>paarth@example.com</strong> or find me on <a href="https://github.com/YOURUSERNAME" target="_blank">GitHub</a>.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Paarth. All rights reserved.
+  </footer>
+</body>
+</html>
