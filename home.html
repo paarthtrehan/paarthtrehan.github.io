@@ -2,95 +2,132 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Paarth | Personal Website</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paarth Trehan | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet"/>
   <style>
+    :root {
+      --bg: #f5f7fa;
+      --text: #1a1a1a;
+      --accent: #4a90e2;
+      --card-bg: #ffffffdd;
+      --shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f9f9f9;
-      color: #1a1a1a;
-      line-height: 1.6;
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
     }
 
     header {
-      padding: 3rem 2rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      padding: 2rem;
+      background: linear-gradient(145deg, #dbeafe, #ffffff);
     }
 
     header h1 {
-      font-size: 2.5rem;
-      font-weight: 600;
+      font-size: 3rem;
+      font-weight: 700;
     }
 
     header p {
-      margin-top: 0.5rem;
-      color: #555;
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #444;
     }
 
     nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 1.5rem;
+      margin-top: 2rem;
     }
 
     nav a {
+      margin: 0 1rem;
       text-decoration: none;
-      color: #333;
+      color: var(--text);
       font-weight: 500;
+      position: relative;
     }
 
-    nav a:hover {
-      color: #0070f3;
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: var(--accent);
+      transition: 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
     }
 
     section {
-      max-width: 800px;
+      max-width: 900px;
       margin: 4rem auto;
       padding: 0 2rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.5s ease-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     section h2 {
-      font-size: 1.75rem;
+      font-size: 2rem;
       margin-bottom: 1rem;
+      color: var(--accent);
       border-bottom: 1px solid #ddd;
       padding-bottom: 0.5rem;
     }
 
-    .project, .experience-item {
+    .card {
+      background: var(--card-bg);
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
       margin-bottom: 1.5rem;
     }
 
     footer {
       text-align: center;
       padding: 2rem;
-      font-size: 0.9rem;
       color: #777;
+      font-size: 0.9rem;
     }
 
     @media (max-width: 600px) {
       header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
-
-      nav {
-        flex-direction: column;
-        gap: 1rem;
+      nav a {
+        margin: 0 0.5rem;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Paarth</h1>
-    <p>Developer • Student • Creator</p>
+    <h1>Paarth Trehan</h1>
+    <p>Developer • Cybersecurity Enthusiast • Builder of Purposeful Tech</p>
     <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -101,38 +138,78 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Hi, I'm Paarth — a computer science student with a passion for building clean, purposeful technology. I enjoy working on projects that solve real-world problems and always strive to learn something new. I'm particularly interested in cybersecurity, backend systems, and thoughtful UI design.</p>
+    <div class="card">
+      <p>I'm a Computer Science student at Northeastern University (GPA: 3.917), passionate about tech that drives change. From founding social impact startups to diving deep into cybersecurity challenges, I believe in solving real problems with clean code and creative design.</p>
+    </div>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-    <div class="project">
-      <h3>LightEmAll (Java)</h3>
-      <p>A logic-based puzzle game built with object-oriented design principles and MVC architecture. Includes visual features like wire gradients from a power source.</p>
+    <div class="card">
+      <h3>LightEmAll</h3>
+      <p>A logic-based Java puzzle game using object-oriented programming, designed with MVC architecture and visual power gradients.</p>
     </div>
-    <div class="project">
+    <div class="card">
       <h3>Web CTF Challenge</h3>
-      <p>Exploited real-world web vulnerabilities (XSS, SQLi, auth bypass) in a simulated environment. Documented findings with security best practices.</p>
+      <p>Captured flags across multiple web vulnerabilities (XSS, SQLi, privilege escalation), building real-world ethical hacking skills.</p>
     </div>
-    <!-- Add more projects as needed -->
+    <div class="card">
+      <h3>AI for Adenocarcinoma</h3>
+      <p>Research project using machine learning to identify cancerous tissues in medical images. Focused on improving detection accuracy.</p>
+    </div>
   </section>
 
   <section id="experience">
     <h2>Experience</h2>
-    <div class="experience-item">
-      <h3>Cybersecurity Intern – SecureNet</h3>
-      <p>Worked on vulnerability analysis and helped implement a secure CI/CD pipeline. Gained hands-on experience with Linux, GitHub Actions, and threat modeling.</p>
+    <div class="card">
+      <h3>Software Engineer @ Oasis Club (2025)</h3>
+      <p>Built mobile apps using React.js and Expo. Collaborated on full-stack development and deployment pipelines.</p>
     </div>
-    <!-- Add more experience items if needed -->
+    <div class="card">
+      <h3>CTF Club @ Northeastern</h3>
+      <p>Developed penetration testing and red-team skills through challenges and competitions.</p>
+    </div>
+    <div class="card">
+      <h3>Founder – Beyond The Smoke</h3>
+      <p>Led a global initiative to help youth quit smoking and vaping through mentoring and motivational programs.</p>
+    </div>
+    <div class="card">
+      <h3>Co-Founder – The Student Help Org</h3>
+      <p>Built a student support platform for GCSE & IB, offering notes, tutors, and online learning tools.</p>
+    </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>You can reach me at <strong>paarth@example.com</strong> or find me on <a href="https://github.com/YOURUSERNAME" target="_blank">GitHub</a>.</p>
+    <div class="card">
+      <p>Email: <strong>trehan.pa@northeastern.edu</strong></p>
+      <p>GitHub: <a href="https://github.com/YOURUSERNAME" target="_blank">github.com/YOURUSERNAME</a></p>
+      <p>Location: Boston, MA</p>
+    </div>
   </section>
 
   <footer>
-    &copy; 2025 Paarth. All rights reserved.
+    &copy; <span id="year"></span> Paarth Trehan. All rights reserved.
   </footer>
+
+  <script>
+    // Scroll reveal
+    const sections = document.querySelectorAll("section");
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.9;
+      sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < triggerBottom) {
+          sec.classList.add("visible");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", () => {
+      document.getElementById("year").textContent = new Date().getFullYear();
+      revealOnScroll();
+    });
+  </script>
 </body>
 </html>
