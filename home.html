@@ -1,254 +1,74 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Paarth Trehan | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Helvetica&display=swap" rel="stylesheet">
   <style>
     :root {
-      --light-bg: #f5f7fa;
-      --light-text: #1a1a1a;
-      --light-card: #ffffffdd;
-
-      --dark-bg: #1a1a1a;
-      --dark-text: #f5f5f5;
-      --dark-card: #2a2a2a;
-
-      --accent: #4a90e2;
-      --shadow: 0 4px 16px rgba(0,0,0,0.1);
-    }
-
-    [data-theme="light"] {
-      --bg: var(--light-bg);
-      --text: var(--light-text);
-      --card-bg: var(--light-card);
-    }
-
-    [data-theme="dark"] {
-      --bg: var(--dark-bg);
-      --text: var(--dark-text);
-      --card-bg: var(--dark-card);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
+      --bg-color: #f9f9f9;
+      --text-color: #333;
+      --accent-color: #4a90e2;
     }
 
     body {
-      font-family: 'Outfit', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
-
-    header {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
-      background: linear-gradient(145deg, #dbeafe, #ffffff);
-    }
-
-    header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-    }
-
-    header p {
-      margin-top: 1rem;
-      font-size: 1.2rem;
-      color: #444;
+      margin: 0;
+      font-family: 'Helvetica', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      scroll-behavior: smooth;
     }
 
     nav {
-      margin-top: 2rem;
+      position: fixed;
+      width: 100%;
+      background-color: var(--bg-color);
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
     nav a {
-      margin: 0 1rem;
       text-decoration: none;
-      color: var(--text);
-      font-weight: 500;
-      position: relative;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      width: 0%;
-      height: 2px;
-      bottom: -4px;
-      left: 0;
-      background-color: var(--accent);
-      transition: 0.3s ease;
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    .resume-btn, .dark-toggle {
-      margin-top: 1.5rem;
-      padding: 0.6rem 1.2rem;
-      border: none;
-      border-radius: 6px;
-      background: var(--accent);
-      color: white;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .resume-btn:hover, .dark-toggle:hover {
-      background: #336ecf;
+      color: var(--text-color);
+      font-weight: bold;
     }
 
     section {
-      max-width: 900px;
-      margin: 4rem auto;
-      padding: 0 2rem;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.5s ease-out;
+      padding: 100px 20px;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: var(--accent);
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 0.5rem;
-    }
-
-    .card {
-      background: var(--card-bg);
-      padding: 1rem 1.5rem;
-      border-radius: 10px;
-      box-shadow: var(--shadow);
-      margin-bottom: 1.5rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: #777;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
-      nav a {
-        margin: 0 0.5rem;
-      }
+    h1, h2 {
+      color: var(--accent-color);
     }
   </style>
 </head>
 <body>
-  <header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
     <h1>Paarth Trehan</h1>
-    <p>Developer • Cybersecurity Enthusiast • Builder of Purposeful Tech</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a class="resume-btn" href="/mnt/data/Resume- Paarth Trehan.pdf" download>Download Resume</a>
-    <button class="dark-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
-  </header>
+    <p>Developer • Problem Solver • Lifelong Learner</p>
+  </section>
 
   <section id="about">
     <h2>About Me</h2>
-    <div class="card">
-      <p>I'm a Computer Science student at Northeastern University (GPA: 3.917), passionate about tech that drives change. From founding social impact startups to diving deep into cybersecurity challenges, I believe in solving real problems with clean code and creative design.</p>
-    </div>
+    <p>I'm a Computer Science student at Northeastern University with a passion for creating impactful technology solutions.</p>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="card">
-      <h3>LightEmAll</h3>
-      <p>A logic-based Java puzzle game using object-oriented programming, designed with MVC architecture and visual power gradients.</p>
-    </div>
-    <div class="card">
-      <h3>Web CTF Challenge</h3>
-      <p>Captured flags across multiple web vulnerabilities (XSS, SQLi, privilege escalation), building real-world ethical hacking skills.</p>
-    </div>
-    <div class="card">
-      <h3>AI for Adenocarcinoma</h3>
-      <p>Research project using machine learning to identify cancerous tissues in medical images. Focused on improving detection accuracy.</p>
-    </div>
-  </section>
+  <!-- Additional sections for Projects, Experience, and Contact -->
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="card">
-      <h3>Software Engineer @ Oasis Club (2025)</h3>
-      <p>Built mobile apps using React.js and Expo. Collaborated on full-stack development and deployment pipelines.</p>
-    </div>
-    <div class="card">
-      <h3>CTF Club @ Northeastern</h3>
-      <p>Developed penetration testing and red-team skills through challenges and competitions.</p>
-    </div>
-    <div class="card">
-      <h3>Founder – Beyond The Smoke</h3>
-      <p>Led a global initiative to help youth quit smoking and vaping through mentoring and motivational programs.</p>
-    </div>
-    <div class="card">
-      <h3>Co-Founder – The Student Help Org</h3>
-      <p>Built a student support platform for GCSE & IB, offering notes, tutors, and online learning tools.</p>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="card">
-      <p>Email: <strong>trehan.pa@northeastern.edu</strong></p>
-      <p>GitHub: <a href="https://github.com/YOURUSERNAME" target="_blank">github.com/YOURUSERNAME</a></p>
-      <p>Location: Boston, MA</p>
-    </div>
-  </section>
-
-  <footer>
-    &copy; <span id="year"></span> Paarth Trehan. All rights reserved.
-  </footer>
-
-  <script>
-    // Reveal sections on scroll
-    const sections = document.querySelectorAll("section");
-    const revealOnScroll = () => {
-      const triggerBottom = window.innerHeight * 0.9;
-      sections.forEach(sec => {
-        const top = sec.getBoundingClientRect().top;
-        if (top < triggerBottom) sec.classList.add("visible");
-      });
-    };
-    window.addEventListener("scroll", revealOnScroll);
-    window.addEventListener("load", () => {
-      document.getElementById("year").textContent = new Date().getFullYear();
-      revealOnScroll();
-    });
-
-    // Theme toggle
-    function toggleTheme() {
-      const html = document.documentElement;
-      html.dataset.theme = html.dataset.theme === "dark" ? "light" : "dark";
-    }
-  </script>
 </body>
 </html>
-
