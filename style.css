@@ -108,3 +108,47 @@ footer {
 .resume-button:hover {
   background-color: #1e40af;
 }
+
+.text-glitch {
+  position: relative;
+  color: white;
+  font-weight: bold;
+}
+
+.text-glitch::before,
+.text-glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  color: #2563eb;
+  clip: rect(0, 900px, 0, 0);
+}
+
+.text-glitch::before {
+  animation: glitchTop 2s infinite linear alternate-reverse;
+}
+
+.text-glitch::after {
+  animation: glitchBottom 2s infinite linear alternate-reverse;
+  color: #1e40af;
+}
+
+@keyframes glitchTop {
+  0% { clip: rect(0, 9999px, 0, 0); }
+  20% { clip: rect(0, 9999px, 15px, 0); }
+  40% { clip: rect(0, 9999px, 8px, 0); }
+  60% { clip: rect(0, 9999px, 20px, 0); }
+  80% { clip: rect(0, 9999px, 5px, 0); }
+  100% { clip: rect(0, 9999px, 0, 0); }
+}
+
+@keyframes glitchBottom {
+  0% { clip: rect(0, 9999px, 0, 0); }
+  20% { clip: rect(0, 9999px, 12px, 0); }
+  40% { clip: rect(0, 9999px, 18px, 0); }
+  60% { clip: rect(0, 9999px, 10px, 0); }
+  80% { clip: rect(0, 9999px, 6px, 0); }
+  100% { clip: rect(0, 9999px, 0, 0); }
+}
