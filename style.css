@@ -84,9 +84,7 @@ body {
 }
 
 .text-glitch::before {
-  animation: glitchTop 1s infinite linear alternate-reverse;
-  transform: translate(-2px, -2px);
-  color: #2563eb;
+  display: none;
 }
 
 .text-glitch::after {
