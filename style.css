@@ -22,7 +22,7 @@ body {
   content: attr(data-text);
   position: absolute;
   left: 0;
-  bottom: -2px;
+  bottom: 5px;
   width: 100%;
   color: #1e40af;
   z-index: -1;
