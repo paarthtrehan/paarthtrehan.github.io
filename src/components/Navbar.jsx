@@ -1,3 +1,4 @@
+import React from 'react';
 import logo from "../assets/images/pt_logo.jpg"
 import {FaLinkedin} from "react-icons/fa";
 import {FaGithub} from "react-icons/fa";
