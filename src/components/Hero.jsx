@@ -22,7 +22,7 @@ const Hero = () => {
                </div>
                <div className="w-10 h-10 lg:w-1/2 lg:h-1/2">
                    <div className="flex justify-end">
-                       <img src={ profilePic } alt="Paarth Trehan"/>
+                       <img src={ profilePic } alt="Paarth Trehan" className="w-1/2 h-1/2 lg:w-3/4 lg:h-3/4"/>
                    </div>
                </div>
            </div>
