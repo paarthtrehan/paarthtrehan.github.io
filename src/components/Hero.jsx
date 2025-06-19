@@ -12,7 +12,7 @@ const Hero = () => {
                        <h1 className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl">
                            Paarth Trehan
                        </h1>
-                       <span className="bg-gradient-to-r from-white via-grey-500 to-black-500 bg-clip-text text-4xl tracking-tight text-transparent">
+                       <span className="text-4xl tracking-tight">
                            Honors Computer Science Student at Northeastern University
                        </span>
                        <p className="my-2 max-w-xl py-6 font-light tracking-tighter">
@@ -20,8 +20,8 @@ const Hero = () => {
                        </p>
                    </div>
                </div>
-               <div className="w-full lg:w-1/2 lg:p-8">
-                   <div className="flex justify-center">
+               <div className="w-10 h-10 lg:w-1/2 lg:h-1/2">
+                   <div className="flex justify-end">
                        <img src={ profilePic } alt="Paarth Trehan"/>
                    </div>
                </div>
